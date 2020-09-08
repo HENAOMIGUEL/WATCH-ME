@@ -10,7 +10,7 @@ export class youtubeService {
         var params = new HttpParams()
         .set('part','snippet')
         .set('q',show)
-        .set('key','AIzaSyBS0tCeAAHvwZ0k_4QW_HBbi_n1oPk7CRo')
+        .set('key','AIzaSyDux37G5D7OCmXKfJY0BOod3p8D2KDQ1Cs')
          .set('maxResults','2');
         //.set('order','rating')
 
