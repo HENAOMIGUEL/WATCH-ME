@@ -1,0 +1,14 @@
+body{
+background:#424242}
+.search-button{width:400px;height:50px;margin:150px auto}
+.container{width:400px;position:relative}
+.container .lupa{position:absolute;margin-left:28px;margin-top:27px;color:#FFF;-webkit-transition:.3s ease-out;transition:.3s ease-out}
+#search{width:70px;height:70px;background-color:#335D6B;color:#FFF;border:none;font-size:.9em;float:left;padding-left:70px;-webkit-transition:.6s ease-out;transition:.6s ease-out}
+#search:active,#search:focus{outline:0;width:400px;padding-right:20px}
+.container:hover #search{width:400px;background-color:#3299BB}
+.container:hover .lupa{color:#424242}
+::-webkit-input-placeholder{color:#CCC}
+:-moz-placeholder{color:#CCC}
+::-moz-placeholder{color:#CCC}
+:-ms-input-placeholder{color:#CCC
+}

@@ -1,0 +1,35 @@
+<!--SPLASH-->
+<app-loading-component *ngIf="loading"></app-loading-component>
+<!------------------------------------------------------------------->
+<!--TV SHOWS-->
+<div class="card-columns" *ngIf="shows.length > 0,else noData">
+    <cdk-virtual-scroll-viewport itemSize="09" class="cards-viewport">
+        <app-cards-tv-show-component [shows]="shows"></app-cards-tv-show-component>
+    </cdk-virtual-scroll-viewport>
+</div>
+
+<!--NOTHING FOUND MESSAGE-->
+<ng-template #noData>
+    <div class="jumbotron jumbotron-fluid jumbo">
+        <i class="fas fa-exclamation-triangle  fa-pulse fa-7x "></i>
+        <div class="container">
+            <br>
+            <h1 class="display-4">NOTHING TO SHOW</h1>
+            <p class="lead">We dont have that tv show name! please search for another one</p>
+        </div>
+    </div>
+</ng-template>
+<!----------------------->
+<!--NAVIGATION BUTTONS-->
+<div *ngIf="shows.length > 0">
+    <div class="search-btns">
+        <div class="btn-previous">
+            <button class="btn btn-success" [disabled]="previousDisabled" (click)="goPrevious()"><i
+                    class="fas fa-chevron-left fa-3x"></i></button>
+        </div>
+        <div class="btn-next">
+            <button class="btn btn-success" [disabled]="nextDisabled" (click)="goNext()"><i
+                    class="fas fa-chevron-right fa-3x"></i></button>
+        </div>
+    </div>
+</div>
