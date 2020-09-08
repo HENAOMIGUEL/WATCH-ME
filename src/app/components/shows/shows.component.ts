@@ -9,7 +9,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   templateUrl: './shows.component.html'
 })
 export class ShowsComponent implements OnInit {
-  @ViewChild(CdkVirtualScrollViewport, null) viewport: CdkVirtualScrollViewport;
+  @ViewChild(CdkVirtualScrollViewport, {static: false}) viewport: CdkVirtualScrollViewport;
 
 
   shows: any[] = [];
